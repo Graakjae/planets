@@ -107,7 +107,11 @@ export default function Planet() {
                                     </p>
                                     <div className="font-Spartan flex justify-center md:justify-start md:pt-10 gap-5">
                                         <p className="text-slate-500">Source</p>
-                                        <a className="text-slate-400 underline" href={planet.overview.source}>
+                                        <a
+                                            className="text-slate-400 underline"
+                                            href={planet.overview.source}
+                                            target="_blank"
+                                        >
                                             Wikipedia
                                         </a>
                                         <Image src={sourceImg} alt={planet.name} className="w-4 h-4" />
@@ -119,7 +123,7 @@ export default function Planet() {
                                             desc === planet.overview.content
                                                 ? "bg-purple-700 border-transparent"
                                                 : "bg-transparent border-slate-700 "
-                                        } border-[1px] mb-4 flex font-medium p-4`}
+                                        } border-[1px] mb-4 flex font-medium p-4 cursor-pointer`}
                                         onClick={e => {
                                             setState(planet.images.planet);
                                             setDesc(planet.overview.content);
@@ -133,7 +137,7 @@ export default function Planet() {
                                             desc === planet.structure.content
                                                 ? "bg-purple-700 border-transparent"
                                                 : "bg-transparent border-slate-700 "
-                                        } border-[1px] mb-4 flex font-medium p-4`}
+                                        } border-[1px] mb-4 flex font-medium p-4 cursor-pointer`}
                                         onClick={e => {
                                             setState(planet.images.internal);
                                             setDesc(planet.structure.content);
@@ -147,7 +151,7 @@ export default function Planet() {
                                             desc === planet.geology.content
                                                 ? "bg-purple-700 border-transparent"
                                                 : "bg-transparent border-slate-700 "
-                                        } border-[1px] mb-4 flex font-medium p-4`}
+                                        } border-[1px] mb-4 flex font-medium p-4 cursor-pointer`}
                                         onClick={() => {
                                             setState(planet.images.geology);
                                             setDesc(planet.geology.content);
