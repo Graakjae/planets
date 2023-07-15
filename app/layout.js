@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head></head>
             <body className="bg-[#070625]">
-                <Image className="absolute z-[-1]" src={backgroundStars} />
+                <Image className="absolute z-[-1]" src={backgroundStars} alt="stars background" />
                 <Navbar />
                 {children}
             </body>
